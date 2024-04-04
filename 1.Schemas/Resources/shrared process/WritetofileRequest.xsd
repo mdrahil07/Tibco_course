@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:WritetofileRequest="http://www.tibco.com/schemas/0.ProjectZero/Resources/shrared process/WritetofileRequest"
+	 xmlns:header="http://www.tibco.com/schemas/0.ProjectZero/Resources/Schemas/Models/header"
+	 targetNamespace="http://www.tibco.com/schemas/0.ProjectZero/Resources/shrared process/WritetofileRequest"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/0.ProjectZero/Resources/Schemas/Models/header" schemaLocation="Resources/Commons/header"/>
+	<xs:element name="WritetofileRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="header:header"/>
+				<xs:element ref="WritetofileRequest:Body"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Body">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="message" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
